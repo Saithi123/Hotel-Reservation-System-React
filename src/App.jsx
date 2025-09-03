@@ -1,4 +1,5 @@
-\
+
+
 import React, { useMemo, useState } from 'react'
 
 // ----- Data model helpers -----
@@ -166,14 +167,7 @@ function pickRooms(availableRooms, n) {
       combos.push(idx.map(i=>arr[i]))
     }
     pushCombo()
-    while (True) {
-      let i = n-1
-      while (i>=0 and idx[i] == i + arr.length - n): i-=1
-      if (i<0) break
-      idx[i]+=1
-      for (let j=i+1;j<n;j++): idx[j]=idx[j-1]+1
-      pushCombo()
-    }
+    
   }
 
   return best || []
